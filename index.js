@@ -90,3 +90,10 @@ console.log(R.and(false, false)); //=> false
  const descend = R.descend(R.prop('age'));
  console.log(R.sort(descend, [p2, p1, p3])); //[ { age: 40 }, { age: 30 }, { age: 20 } ]
 
+ function theFunction(name, profession) {
+    console.log("My name is " + name + " and I am a " + profession +".");
+}
+console.log(theFunction("John", "fireman"));
+console.log(theFunction.apply(this, ["John", "fireman"])); // demande un array
+console.log(theFunction.call(this, "John", "fireman")); // demande une liste
+
